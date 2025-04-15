@@ -30,14 +30,14 @@ P{
   /*ヘッダー*/
   #header {
       display: flex;
-      justify-content: space-between;;
+      justify-content: space-between;
   }
 
   /*ナビゲーションのレイアウト*/
   #nav-pc {
       text-align: right;
       font-size: 14px;
-      padding-top: 15px;;
+      padding-top: 15px;
   }
  /* SP用ナビゲーション非表示 */
  #menu-sp {
@@ -74,14 +74,12 @@ P{
     #logo{
     display:none;
     }
-    #logo-sp{
-        top:50px;
-    }
-    }
+    
+}
     body{
         min-width: 375px;
         margin: 0;
-        
+        padding: 0;
     }
     /*PC用ナビゲーション非表示 */
     #nav-pc {
@@ -89,8 +87,12 @@ P{
     }
     /*ハンバーガーメニュー*/
     #menu-sp {
-        float: right;
+        position: fixed;
         padding: 0;
+        top:0px;
+        right:0px;
+        border: none;
+        background-color: transparent;
     }
 
     /*スマホ用ナビゲーションの表示切替*/
@@ -98,8 +100,8 @@ P{
         background-color: #ce933e;
         position: absolute;
         left: 0;
-        top:0px;
-        height: auto;
+        top: 0;
+        height: 100%;
         width: 100%;
         display: none;
         z-index: 100;
@@ -107,10 +109,10 @@ P{
 
      /*Xボタンの設定*/
         #close {
-            position: absolute;
-            top: 10px;
+            position: fixed;
+            top: 20px;
             right: 20px;
-            background-color: #ce933e;
+            background-color: transparent;
             border: none;
         }
 

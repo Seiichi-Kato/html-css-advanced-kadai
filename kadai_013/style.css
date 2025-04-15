@@ -1,186 +1,145 @@
-/*PC、スマホ共通の設定 */
+/* PC、スマホ共通スタイル */
 body {
-    font-family: "Source Sans Pro","Hiragino Kaku Gothic ProN",Meiryo,Arial,sans-serif;
-}
-
-
-P{
-    font-size: 15px;
-    }
-
-#main-visual>img {
-    width: 100%;
-    height: auto;
-}
-
-
- /* PC用スタイル */
-/* body全体の設定 */
-    @media screen and (min-width:768px){
-        #menu-sp {
-            display: none; /* ハンバーガーメニューを非表示 */
-        }
-
-  body {
-      max-width: 1080px;;
-      min-width: 960px;
-      margin: 0 auto 0 auto;
+    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+      sans-serif;
   }
-
-  /*ヘッダー*/
-  #header {
+  
+  p {
+    font-size: 15px;
+  }
+  
+  #main-visual>img {
+    width: 100%;
+  }
+  
+  /*================
+  PC用のスタイル 
+  =================*/
+  @media screen and (min-width: 768px) {
+    /* 横幅設定 */
+    body {
+      max-width: 1080px;
+      min-width: 960px;
+      margin: 30px; auto 0 auto;
+    }
+  
+    /* ヘッダー */
+    header {
       display: flex;
       justify-content: space-between;
-  }
-
-  /*ナビゲーションのレイアウト*/
-  #nav-pc {
+    }
+  
+    /* ナビゲーションのレイアウト */
+    #nav-pc {
       text-align: right;
       font-size: 14px;
       padding-top: 15px;
-  }
- /* SP用ナビゲーション非表示 */
- #menu-sp {
-    display: none;
-  }
-  #nav-sp {
-    display: none;
-  }
-    /*ナビゲーションリンクの装飾設定*/
-    #nav-pc>a {
-        text-decoration: none;
-        margin-left: 20px;
     }
+  
+    /* ナビゲーションのリンクの装飾設定 */
+    #nav-pc a {
+      text-decoration: none;
+      margin-left: 20px;
+    }
+  
     #nav-pc>a:link {
-        color: #0d0d0d;
+      color: #0d0d0d;
     }
-
+  
     #nav-pc>a:visited {
-        color: #0d0d0d;
+      color: #0d0d0d;
     }
+  
     #nav-pc>a:hover {
-        color: #0d0d0d;
-        text-decoration: underline;
+      color: #0d0d0d;
+      text-decoration: underline;
     }
+  
     #nav-pc>a:active {
-        color: #0d0d0d;
+      color: #0d0d0d;
     }
-}
-
-
-  /* スマートフォン用のスタイル */
-  @media 
-  screen and (max-width: 767px) {
-    #logo{
-    display:none;
+  
+    #menu-sp {
+      display: none;
     }
-    
-}
-    body{
+  
+    #nav-sp {
+      display: none;
+    }
+  }
+  
+  /* スマートフォン用 */
+  @media screen and (max-width: 767px) {
+    body {
         min-width: 375px;
         margin: 0;
-        padding: 0;
     }
-    /*PC用ナビゲーション非表示 */
+
     #nav-pc {
         display: none;
     }
-    /*ハンバーガーメニュー*/
+
     #menu-sp {
-        position: fixed;
+        float: right;
         padding: 0;
-        top:0px;
-        right:0px;
-        border: none;
-        background-color: transparent;
+        border: none; /* 枠を消す */
+    background-color: transparent; /* 背景を透明にする */
     }
 
-    /*スマホ用ナビゲーションの表示切替*/
     #nav-sp {
         background-color: #ce933e;
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 0px;
+        top: 0px;
         height: 100%;
         width: 100%;
         display: none;
         z-index: 100;
     }
 
-     /*Xボタンの設定*/
-        #close {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: transparent;
-            border: none;
-        }
-
-      #nav-sp ul{
+    #nav-sp ul {
         padding-left: 0;
-      }
+        margin-top: 80px;
+    }
 
-        #nav-sp li {
-            list-style: none;
-        }
+    #nav-sp li {
+        list-style: none;
+    }
 
-        /*ナビゲーションリンクの装飾設定*/
-#nav-sp nav a{
-    display:block;
-}
-
-#nav-sp nav a:link{
-    color: #ffffff;
-}
-#nav-sp nav a:visited{
-    color: #ffffff;
-}
-#nav-sp nav a:hover{
-    color: #ffffff;
-    text-decoration: underline;
-}
-#nav-sp nav a:active{
-    color: #ffffff;
-}
-#nav-sp .menu{
-    text-decoration:  none;
-    display:block;
-    margin: 0 20px 0 20px;
-    height: 44px;
-    font-size: 16px;
-    background-image: url("images/arrow.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-}
-#manu-sp{
-    display: none;
-}
-
-#nap-sp{
-    display: none;
-}
-
-#new-button {
-    position: absolute;
-    top: 20px;
-    right: 60px; /* 位置を調整して×ボタンからずらす */
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 16px;
-}
-
-    /* 横幅設定 */
-    body {
-        min-width: 375px;
-        margin: 0;
-      }
-      #new-button {
+    #close {
         position: absolute;
         top: 20px;
-        right: 60px; /* 位置を調整して×ボタンからずらす */
-        background-color: transparent;
+        right: 20px;
         background-color: #ce933e;
-        border: none;
-        font-size: 16px;
     }
+
+    #logo-sp {
+        margin: 80px 0 30px 20px;
+    }
+
+    #nav-sp a {
+        display: block;
+    }
+
+    #nav-sp a:link,
+    #nav-sp a:visited,
+    #nav-sp a:hover,
+    #nav-sp a:active {
+        color: #ffffff;
+    }
+
+    #nav-sp a:hover {
+        text-decoration: underline;
+    }
+
+    .menu {
+        text-decoration: none;
+        display: block;
+        margin: 0 20px 0 20px;
+        height: 44px;
+        font-size: 16px;
+        background-image: url("images/arrow.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}

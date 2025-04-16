@@ -82,8 +82,8 @@ body {
     #menu-sp {
         float: right;
         padding: 0;
-        border: none; /* 枠を消す */
-    background-color: transparent; /* 背景を透明にする */
+        border: none;
+    background-color: transparent; 
     }
 
     #nav-sp {
@@ -98,7 +98,7 @@ body {
     }
 
     #nav-sp ul {
-        padding-left: 0;
+        left: 50px;
         margin-top: 80px;
     }
 
@@ -111,6 +111,7 @@ body {
         top: 20px;
         right: 20px;
         background-color: #ce933e;
+        border: none;
     }
 
     #logo-sp {
@@ -135,7 +136,7 @@ body {
     .menu {
         text-decoration: none;
         display: block;
-        margin: 0 20px 0 20px;
+        margin: 0 20px 0 0;
         height: 44px;
         font-size: 16px;
         background-image: url("images/arrow.png");
